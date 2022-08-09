@@ -1,0 +1,117 @@
+.projectDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    display: flex;
+    height: 70%;
+    width: 55%;
+    margin-left: 50px;
+    flex-direction: column;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+
+.project {
+    font-family: 'Graphik';
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    cursor: pointer;
+}
+
+.project > h1 {
+    font-size: min(8vw, 5em);
+}
+.project > p {
+    color: #d00202;
+    font-size: min(5vw, 1.4em);
+}
+
+
+.project:hover {
+    font-family: 'Graphik';
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    cursor: pointer;
+    transform: translateX(50px);
+}
+
+
+
+
+
+
+/*___________________________________________________
+
+                Projects pages
+_____________________________________________________*/
+
+
+
+
+
+
+
+.restaurant,
+.weather {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    min-height: 100%;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+.restaurantTitle {
+    font-size: 5vw;
+    margin-top: 50px;
+}
+
+.restaurant > p {
+    color: #d00202;
+    font-size: min(4vw, 1.4em);
+}
+
+.imgsDiv {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.imgsDiv hr {
+    width: 80%;
+    margin: auto;
+}
+
+.imgsDiv img {
+    width: 50vw;
+    height: auto;
+}
+
+.imgsDiv img:last-child {
+    align-self: flex-end;
+}
+
+
+.restaurantImgs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.restaurantImgs h1 {
+    align-self: center;
+    font-size: min(4vw, 1.4em);
+}
+
+.projectLink {
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+    font-size: min(3vw, 1.2em);
+}
+
+.projectLink span {
+    color: rgb(151, 175, 247);
+}

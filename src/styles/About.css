@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Graphik';
+    src: url('./fonts/Graphik-Semibold.ttf')
+  }
+  
+
+.aboutDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutText {
+    font-size: 2em;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+    width: 75%;
+    gap: 30px;
+    margin-left: 70px;
+}

@@ -1,0 +1,47 @@
+.contactDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactBtn {
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 900;
+    justify-content: center;
+    padding: 7px 30px;
+    min-width: 180px;
+    color: black;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: transparent;
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.contactBtn:hover {
+    transform: scale(1.06);
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.contactText {
+    font-size: 3em;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+    width: 75%;
+    gap: 30px;
+    margin-right: 50px;
+}
+
+.contactText > div {
+    width: 60%;
+    align-self: center;
+    font-size: 1.7rem;
+}
+
+
+.contactDiv a {
+    align-self: center;
+}

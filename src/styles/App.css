@@ -1,0 +1,172 @@
+
+@font-face {
+    font-family: 'GTWalsheimPro-Light';
+    src: url('./fonts/GTWalsheimPro-Light.ttf')
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins-Thin.ttf')
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+.App {
+    height: 100vh;
+    width: 100%;
+}
+
+* {
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background: linear-gradient(to right, #000000, #131111, #0e0606);
+}
+
+
+.homeDiv,
+.aboutDiv,
+.projectDiv,
+.contactDiv{
+    padding: 10px 50px;
+    height: 90%;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+.description  {
+    align-self: flex-end;
+    font-size: 1.5em;
+    padding: 40px 40px 0px 0px;
+}
+
+
+
+/*________________________________________________________
+
+
+                 Media quieries
+
+_________________________________________________________*/
+
+
+
+@media screen and (max-width: 425px){
+    body {
+        background:#000000;
+    }
+    .burger { 
+        display: flex;
+    }
+    .navContainer nav {
+        display: flex;
+        padding-right: unset;
+    }
+    .navContainer {
+        padding: 10px 25px 0px 25px;
+    }
+    .description {
+        padding: unset;
+    }
+    .homeDiv,
+    .aboutDiv,
+    .contactDiv {
+        height: unset;
+        padding: 10px 50px;
+        gap: 90px;
+        min-height: 90%;
+    }
+    .homeText,
+    .aboutText {
+        height: 70%;
+        width: 100%;
+        gap: 50px;
+        margin-right: unset;
+    }
+
+    .homeText h1 {
+        font-size: 1.7em;
+    }
+    .homeText > div {
+        font-size: 1.1em;
+        align-self: unset;
+    }
+    .socials {
+        left: 3%;
+    }
+    .aboutText {
+        font-size: 1.3em;
+        height: 100%;
+        margin-left: unset;
+    }
+    .projects {
+        margin-top: 50px;
+        margin-left: unset;
+        height: 70%;
+        width: 100%;
+    }
+    .contactDiv {
+        gap: 70px;
+    }
+    .contactText {
+        margin-right: unset;
+        width: 100%;
+        font-size: unset;
+    }
+    .contactText h1 {
+        font-size: 4em;
+    }
+    .contactText > div {
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .contactBtn {
+        min-width: 120px;
+        font-size: 1.3em;
+    }
+    .ul-nav {
+        transition: .6s ease-in-out;
+        transform: translateX(120%);
+        font-size: 1.8rem;
+        flex-direction: column;
+        gap: 30px;
+        font-weight: 600;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        height: 100%;
+        background: rgb(9 17 30);
+        left: 0;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        transition: .6s ease-in-out;
+    }
+    .ul-nav.show {
+        transform: translateX(0);
+    }
+    .burger2.show {
+        display: flex;
+        z-index: 100;
+        right: -5px;
+        top: 30px;
+        object-fit: cover;
+        position: fixed;
+        width: 60px;
+        height: 37px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 6px;
+      }
+   
+}
