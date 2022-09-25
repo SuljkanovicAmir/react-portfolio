@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.b149ca31.css",
-    "main.js": "/static/js/main.b2261b69.js",
-    "static/media/Main.jpg": "/static/media/Main.eb74ad5dc3e42e26a484.jpg",
-    "static/media/Poppins-Thin.ttf": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
-    "static/media/Graphik-Semibold.ttf": "/static/media/Graphik-Semibold.d5030ee06427b7a7cb49.ttf",
-    "static/media/GTWalsheimPro-Light.ttf": "/static/media/GTWalsheimPro-Light.0a89fe38505661051946.ttf",
-    "static/media/Menu.jpg": "/static/media/Menu.a2cdfcf3a89ea126c2b9.jpg",
-    "static/media/gh.svg": "/static/media/gh.2313f6066f27488414053abdb5325607.svg",
-    "index.html": "/index.html",
-    "static/media/linkd.svg": "/static/media/linkd.6f93e62029885080abdcff85e74f2751.svg",
-    "static/media/close.svg": "/static/media/close.745063d25d8995a5d5c582e48c97dc84.svg",
-    "main.b149ca31.css.map": "/static/css/main.b149ca31.css.map",
-    "main.b2261b69.js.map": "/static/js/main.b2261b69.js.map"
+    "main.css": "/react-portfolio/static/css/main.9bcc47e7.css",
+    "main.js": "/react-portfolio/static/js/main.c50f874d.js",
+    "static/media/Main.jpg": "/react-portfolio/static/media/Main.eb74ad5dc3e42e26a484.jpg",
+    "static/media/Poppins-Thin.ttf": "/react-portfolio/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
+    "static/media/Graphik-Semibold.ttf": "/react-portfolio/static/media/Graphik-Semibold.d5030ee06427b7a7cb49.ttf",
+    "static/media/GTWalsheimPro-Light.ttf": "/react-portfolio/static/media/GTWalsheimPro-Light.0a89fe38505661051946.ttf",
+    "static/media/Menu.jpg": "/react-portfolio/static/media/Menu.a2cdfcf3a89ea126c2b9.jpg",
+    "static/media/gh.svg": "/react-portfolio/static/media/gh.2313f6066f27488414053abdb5325607.svg",
+    "index.html": "/react-portfolio/index.html",
+    "static/media/linkd.svg": "/react-portfolio/static/media/linkd.6f93e62029885080abdcff85e74f2751.svg",
+    "static/media/close.svg": "/react-portfolio/static/media/close.745063d25d8995a5d5c582e48c97dc84.svg",
+    "main.9bcc47e7.css.map": "/react-portfolio/static/css/main.9bcc47e7.css.map",
+    "main.c50f874d.js.map": "/react-portfolio/static/js/main.c50f874d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b149ca31.css",
-    "static/js/main.b2261b69.js"
+    "static/css/main.9bcc47e7.css",
+    "static/js/main.c50f874d.js"
   ]
 }
