@@ -4,26 +4,29 @@
 }
 
 .homeText {
-    font-size: 2em;
+    font-size: 11em;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60%;
-    width: 75%;
-    gap: 30px;
-    margin-right: 50px;
+    height: 70%;
+    width: 60%;
+    font-family: 'Semibold';
+    letter-spacing: -2px;
+    flex: 1;
 }
 
-.homeText h1 {
-    font-size: 3em;
+.homeText div:nth-child(2),
+.homeText div:last-child {
+    color: #ea0f1e
 }
 
-.homeText div {
-    font-size: 1.5em;
-    align-self: flex-end;
-}
 
 .figure {
     position: fixed;
+}
+
+
+.homeDiv > .socials {
+    display: none;
 }

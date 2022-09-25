@@ -5,12 +5,15 @@
 
 .projects {
     display: flex;
-    height: 70%;
-    width: 55%;
-    margin-left: 50px;
+    height: 100%;
+    flex: 1;
+    width: 80%;
+    margin-left: 100px;
     flex-direction: column;
     margin-right: auto;
-    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    gap: 140px;
 }
 
 
@@ -30,8 +33,7 @@
 
 
 .project:hover {
-    font-family: 'Graphik';
-    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    transition: all .6s cubic-bezier(0.2, 0.6, 0.2, 1);
     cursor: pointer;
     transform: translateX(50px);
 }

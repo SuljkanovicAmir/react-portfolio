@@ -9,6 +9,12 @@
   src: url('./fonts/Poppins-Thin.ttf')
 }
 
+@font-face {
+    font-family: 'Semibold';
+    src: url('./fonts/Graphik-Semibold.ttf')
+  }
+  
+
 *::-webkit-scrollbar {
     display: none;
   }
@@ -28,7 +34,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #000000, #131111, #0e0606);
+    background: black;
 }
 
 
@@ -36,8 +42,8 @@ body {
 .aboutDiv,
 .projectDiv,
 .contactDiv{
-    padding: 10px 50px;
-    height: 90%;
+    padding: 50px;
+    min-height: 90%;
     font-family: 'Poppins';
     font-weight: 900;
 }
@@ -48,6 +54,9 @@ body {
     padding: 40px 40px 0px 0px;
 }
 
+.logoText.active {
+    visibility: hidden;
+}
 
 
 /*________________________________________________________
@@ -59,7 +68,7 @@ _________________________________________________________*/
 
 
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
     body {
         background:#000000;
     }
@@ -80,7 +89,7 @@ _________________________________________________________*/
     .aboutDiv,
     .contactDiv {
         height: unset;
-        padding: 10px 50px;
+        padding: 50px 25px 50px 25px;
         gap: 90px;
         min-height: 90%;
     }
@@ -91,13 +100,11 @@ _________________________________________________________*/
         gap: 50px;
         margin-right: unset;
     }
-
-    .homeText h1 {
-        font-size: 1.7em;
-    }
-    .homeText > div {
-        font-size: 1.1em;
-        align-self: unset;
+    .homeText {
+        font-size: 4.4em;
+        gap: 30px;
+        width: 90%;
+        flex: unset;
     }
     .socials {
         left: 3%;
@@ -108,10 +115,13 @@ _________________________________________________________*/
         margin-left: unset;
     }
     .projects {
-        margin-top: 50px;
+        margin-top: 100px;
         margin-left: unset;
-        height: 70%;
         width: 100%;
+        flex: 1;
+        margin-top: 100px;
+        gap: 100px;
+        margin-bottom: 50px;
     }
     .contactDiv {
         gap: 70px;
@@ -143,7 +153,7 @@ _________________________________________________________*/
         justify-content: center;
         position: fixed;
         height: 100%;
-        background: rgb(9 17 30);
+        background: rgb(0, 0, 0);
         left: 0;
         top: 0;
         z-index: 99;
@@ -162,11 +172,47 @@ _________________________________________________________*/
         position: fixed;
         width: 60px;
         height: 37px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         display: flex;
         justify-content: flex-start;
         align-items: center;
         padding-left: 6px;
       }
-   
+      .closeImg {
+        filter: invert(1);
+      }
+    .navContainer > .socials {
+        display: none;
+    }
+    .homeDiv > .socials {
+        display: flex;
+        position: unset;
+        flex-direction: unset;
+        gap: 15px;
+        justify-content: center;
+        margin-top: auto;
+    }
+    .homeDiv .description {
+        visibility: hidden;
+    }
+    .homeDiv .line {
+        display: none;
+    }
+    .projectDiv {
+        padding: 50px 25px;
+        height: unset;
+        min-height: 100%;
+    }
+    .project:hover {
+        transition: unset;
+        transform: unset;
+    }
+    .project p {
+        margin-top: 3px;
+        font-size: 14px;
+    }
+    .project > h1 {
+        font-size: min(9vw, 5em);
+        line-height: 140%;
+    }
 }

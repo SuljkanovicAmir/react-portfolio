@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import GH from '../../styles/images/gh.svg'
-import LinkedIn from '../../styles/images/linkd.svg'
-import line from '../../styles/images/line.png'
+
 import Burger from '../../styles/images/burger.png'
 import Close from '../../styles/images/close.svg'
-
+import Socials from "./Socials";
 
 
 
@@ -36,17 +34,7 @@ function Navigation() {
               </button>
             </nav>
           </div>
-          <div className="socials ">
-            <a href="https://www.linkedin.com/in/amir-suljkanovic/" target='_blank' rel="noreferrer">
-              <img src={LinkedIn} alt="Linkedin" className="socicon"/>
-            </a>
-            <a href="https://github.com/SuljkanovicAmir" target='_blank' rel="noreferrer">
-              <img  src={GH} alt="Github" className="socicon"/>
-            </a>
-            <a href='.'>
-              <img  className="line" src={line} alt="line" />
-            </a>
-          </div>
+          <Socials />
       </div>
     );
   }

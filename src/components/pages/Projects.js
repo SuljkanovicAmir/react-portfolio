@@ -32,6 +32,10 @@ function Projects() {
             <h1>The Weather App</h1>
             <p>The Odin Project: Weather App</p>
           </Link>
+          <Link to='/projects/weather' className="project">
+            <h1>Shopping App</h1>
+            <p>React App using Axios and React Router</p>
+          </Link>
         </motion.div>
       </motion.div>
     );
