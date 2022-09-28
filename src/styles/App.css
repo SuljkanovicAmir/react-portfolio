@@ -20,8 +20,10 @@
   }
 
 .App {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
+    background: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 26%, rgba(1,1,1,1) 28%, rgb(25 25 25) 61%, rgb(38 38 38 / 88%) 73%, rgba(0,0,0,1) 100%);
 }
 
 * {
@@ -42,7 +44,7 @@ body {
 .aboutDiv,
 .projectDiv,
 .contactDiv{
-    padding: 50px;
+    padding: 50px 50px 100px 50px;
     min-height: 90%;
     font-family: 'Poppins';
     font-weight: 900;
@@ -87,12 +89,14 @@ _________________________________________________________*/
     }
     .homeDiv,
     .aboutDiv,
-    .contactDiv {
+    .contactDiv,
+    .projectDiv {
         height: unset;
-        padding: 50px 25px 50px 25px;
-        gap: 90px;
+        padding: 50px 25px 100px 25px;
+        gap: 130px;
         min-height: 90%;
     }
+    
     .homeText,
     .aboutText {
         height: 70%;
@@ -113,18 +117,17 @@ _________________________________________________________*/
         font-size: 1.3em;
         height: 100%;
         margin-left: unset;
+        margin-top: unset;
     }
     .projects {
-        margin-top: 100px;
-        margin-left: unset;
         width: 100%;
-        flex: 1;
-        margin-top: 100px;
-        gap: 100px;
+        margin-top: unset;
+        gap: 85px;
         margin-bottom: 50px;
     }
     .contactDiv {
         gap: 70px;
+        padding: 50px 25px;
     }
     .contactText {
         margin-right: unset;
@@ -144,7 +147,7 @@ _________________________________________________________*/
     }
     .ul-nav {
         transition: .6s ease-in-out;
-        transform: translateX(120%);
+        transform: translateY(-120%);
         font-size: 1.8rem;
         flex-direction: column;
         gap: 30px;
@@ -161,7 +164,7 @@ _________________________________________________________*/
         transition: .6s ease-in-out;
     }
     .ul-nav.show {
-        transform: translateX(0);
+        transform: translateY(0);
     }
     .burger2.show {
         display: flex;
@@ -184,6 +187,12 @@ _________________________________________________________*/
     .navContainer > .socials {
         display: none;
     }
+    .homeDiv {
+        padding: 50px 25px;
+        gap: 100px;
+        min-height: 90vh;
+    }
+    
     .homeDiv > .socials {
         display: flex;
         position: unset;
@@ -199,7 +208,6 @@ _________________________________________________________*/
         display: none;
     }
     .projectDiv {
-        padding: 50px 25px;
         height: unset;
         min-height: 100%;
     }
@@ -215,4 +223,51 @@ _________________________________________________________*/
         font-size: min(9vw, 5em);
         line-height: 140%;
     }
+    .imgsDiv {
+        width: 100%;
+        margin: 100px auto;
+    }
+    .project-imgs {
+        flex-direction: column;
+        gap: 30px;
+    } 
+    .project-imgs.second {
+        flex-direction: column-reverse;
+    }
+    .project-imgs h1 {
+        color: black;
+        font-size: 1.2em;
+    }
+    .imgsDiv img {
+        width: 100%;
+        box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    }
+    .projectLink {
+        font-size: 1.2em;
+    }
+    .project-title {
+        margin-top: 130px;
+        color: black;
+        font-size: 1.8em;
+    }
+    .project-description {
+        color: black;
+        padding: 20px 0px 0px 0px;
+        font-size: 1.2em;
+    }
+    .project-page {
+        padding: 10px 25px;
+        background-color: white;
+    }
+    .img-1,
+    .img-3 {
+        transform: translateX(-25px);
+    } 
+    .img-2 {
+        transform: translateX(25px);
+    }    
+    .projectLink p {
+        color: black;
+    }   
 }
+

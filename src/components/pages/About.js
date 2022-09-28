@@ -7,7 +7,12 @@ function About() {
         className="aboutDiv" 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        exit={{opacity: 0}}
+        transition={{
+          type: "easeInOut",
+          duration: '0.2',
+          delay: 0, 
+        }}
       >
         <h1 className="description">about me.</h1>
         <div  className='aboutText'>

@@ -6,9 +6,13 @@ function Contact() {
     return (
     <motion.div 
       className="contactDiv"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, x: 1000 }}
+      animate={{ opacity: 1, x:0 }}
+      transition={{
+        type: "easeInOut",
+        duration: '1',
+        delay: 0, 
+      }}
       >
       <h1 className="description">contact me.</h1>
       <div className="contactText">

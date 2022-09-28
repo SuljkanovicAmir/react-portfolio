@@ -25,8 +25,15 @@
 .figure {
     position: fixed;
 }
+.homeDiv .description {
+    visibility: hidden;
+}
 
 
 .homeDiv > .socials {
     display: none;
+}
+
+.homeText div {
+    opacity: 0;
 }

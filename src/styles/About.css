@@ -11,12 +11,8 @@
 
 .aboutText {
     font-size: 2em;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 60%;
-    width: 75%;
-    gap: 30px;
-    margin-left: 70px;
+    height: 90%;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
 }

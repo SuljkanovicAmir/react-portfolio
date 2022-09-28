@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Restaurant from './pages/projects/Restaurant';
 import Weather from './pages/projects/Weather';
+import Shopping from './pages/projects/Shopping';
 import {AnimatePresence} from 'framer-motion'
 
 function AnimatedRoutes() {
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/projects/restaurant" element={<Restaurant />}/>
         <Route path="/projects/weather" element={<Weather />}/>
+        <Route path="/projects/shopping" element={<Shopping />}/>
       </Routes>
     </AnimatePresence>
   )

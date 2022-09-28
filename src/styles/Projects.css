@@ -6,14 +6,12 @@
 .projects {
     display: flex;
     height: 100%;
-    flex: 1;
-    width: 80%;
-    margin-left: 100px;
+    width: 70%;
     flex-direction: column;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
     gap: 140px;
+    margin: auto;
+    margin-top: 180px;
+    margin-bottom: 100px;
 }
 
 
@@ -54,8 +52,7 @@ _____________________________________________________*/
 
 
 
-.restaurant,
-.weather {
+.project-page{
     display: flex;
     flex-direction: column;
     padding: 10px 50px;
@@ -64,12 +61,18 @@ _____________________________________________________*/
     font-weight: 900;
 }
 
-.restaurantTitle {
-    font-size: 5vw;
-    margin-top: 50px;
+.project-description {
+    align-self: flex-end;
+    font-size: 1.5em;
+    padding: 40px 40px 0px 0px;
 }
 
-.restaurant > p {
+.project-title {
+    font-size: 5vw;
+    margin-top: 100px;
+}
+
+.project-page > p {
     color: #d00202;
     font-size: min(4vw, 1.4em);
 }
@@ -97,12 +100,12 @@ _____________________________________________________*/
 }
 
 
-.restaurantImgs {
+.project-imgs {
     display: flex;
     justify-content: space-around;
 }
 
-.restaurantImgs h1 {
+.project-imgs h1 {
     align-self: center;
     font-size: min(4vw, 1.4em);
 }
@@ -112,8 +115,18 @@ _____________________________________________________*/
     display: flex;
     gap: 10px;
     font-size: min(3vw, 1.2em);
+    flex-direction: column;
 }
 
 .projectLink span {
     color: rgb(151, 175, 247);
+}
+
+.projectLink > div {
+    display: flex;
+    gap: 5px;
+}
+
+.projectLink a {
+    align-self: flex-end;
 }
