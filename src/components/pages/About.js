@@ -1,10 +1,12 @@
 import '../../styles/About.css'
 import { motion } from 'framer-motion'
+import React from 'react'
 
-function About() {
+const About = React.forwardRef((props, forwardedRef) => {
     return (
       <motion.div 
         className="aboutDiv" 
+        ref={forwardedRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{opacity: 0}}
@@ -28,7 +30,7 @@ function About() {
         </div>
       </motion.div>
     );
-  }
+  })
   
   export default About;
   

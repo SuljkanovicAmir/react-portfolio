@@ -13,21 +13,13 @@
     font-family: 'Semibold';
     src: url('./fonts/Graphik-Semibold.ttf')
   }
-  
 
-*::-webkit-scrollbar {
-    display: none;
+  @font-face {
+    font-family: 'BL';
+    src: url('./fonts/BLMelody-Regular.ac0fff03c34f03f9f527.woff')
   }
 
-.App {
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 26%, rgba(1,1,1,1) 28%, rgb(25 25 25) 61%, rgb(38 38 38 / 88%) 73%, rgba(0,0,0,1) 100%);
-}
-
 * {
-    color: white;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -35,8 +27,38 @@
     list-style-type: none;
 }
 
+
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+  :root {
+    --main-bg-color: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 26%, rgba(1,1,1,1) 28%, rgb(25 25 25) 61%, rgb(38 38 38 / 88%) 73%, rgba(0,0,0,1) 100%);
+    --main-bg-color: black;
+} 
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.App {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: var(--main-bg-color);
+    
+}
+
+button {
+    cursor: pointer;
+}
+
+
 body {
     background: black;
+    color: white;
 }
 
 
@@ -44,10 +66,11 @@ body {
 .aboutDiv,
 .projectDiv,
 .contactDiv{
-    padding: 50px 50px 100px 50px;
-    min-height: 90%;
+    padding: 80px 50px 100px 50px;
+    min-height: 100vh;
     font-family: 'Poppins';
     font-weight: 900;
+    scroll-snap-align: start;
 }
 
 .description  {
@@ -56,9 +79,126 @@ body {
     padding: 40px 40px 0px 0px;
 }
 
-.logoText.active {
-    visibility: hidden;
+
+.ul-nav {
+    transform: translateY(-120%);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    transition: 0s 0.8s;
 }
+
+.ul-nav > div {
+    display: flex;
+    font-size: 4.2rem;
+    font-weight: 900;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'BL';
+}
+
+.ul-nav a {
+    color: black;
+    text-transform: uppercase;
+}
+
+.ul-nav a:hover {
+    -webkit-text-fill-color: #f5f3f4;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #0b090a;
+    color: #0b090a;
+}
+
+.ul-nav.show {
+    transform: translateY(0);
+}
+
+.burger2.show {
+    display: flex;
+    z-index: 8;
+    right: -5px;
+    top: 25px;
+    object-fit: cover;
+    position: fixed;
+    width: 60px;
+    height: 37px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 6px;
+  }
+  
+  .closeImg {
+    filter: invert(1);
+  }
+
+  
+.loading {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg-color);
+}
+
+
+.loader {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 50%;
+    border-top: 2px solid #ffffff;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loader-text {
+    animation: spin 1s linear infinite reverse;
+    font-family: 'BL';
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*________________________________________________________
@@ -92,11 +232,11 @@ _________________________________________________________*/
     .contactDiv,
     .projectDiv {
         height: unset;
-        padding: 50px 25px 100px 25px;
-        gap: 130px;
-        min-height: 90%;
+        padding: 80px 35px 100px 35px;
+        gap: 100px;
+        min-height: 100%;
     }
-    
+ 
     .homeText,
     .aboutText {
         height: 70%;
@@ -109,9 +249,6 @@ _________________________________________________________*/
         gap: 30px;
         width: 90%;
         flex: unset;
-    }
-    .socials {
-        left: 3%;
     }
     .aboutText {
         font-size: 1.3em;
@@ -127,7 +264,6 @@ _________________________________________________________*/
     }
     .contactDiv {
         gap: 70px;
-        padding: 50px 25px;
     }
     .contactText {
         margin-right: unset;
@@ -145,62 +281,31 @@ _________________________________________________________*/
         min-width: 120px;
         font-size: 1.3em;
     }
-    .ul-nav {
-        transition: .6s ease-in-out;
-        transform: translateY(-120%);
-        font-size: 1.8rem;
-        flex-direction: column;
-        gap: 30px;
-        font-weight: 600;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        height: 100%;
-        background: rgb(0, 0, 0);
-        left: 0;
-        top: 0;
-        z-index: 99;
-        width: 100%;
-        transition: .6s ease-in-out;
-    }
-    .ul-nav.show {
-        transform: translateY(0);
-    }
-    .burger2.show {
-        display: flex;
-        z-index: 100;
-        right: -5px;
-        top: 30px;
-        object-fit: cover;
-        position: fixed;
-        width: 60px;
-        height: 37px;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 6px;
-      }
-      .closeImg {
-        filter: invert(1);
-      }
+
+      
     .navContainer > .socials {
         display: none;
     }
     .homeDiv {
         padding: 50px 25px;
         gap: 100px;
-        min-height: 90vh;
+        min-height: 100vh;
+        height: 100vh;
     }
     
     .homeDiv > .socials {
         display: flex;
         position: unset;
         flex-direction: unset;
-        gap: 15px;
         justify-content: center;
         margin-top: auto;
     }
+
+    .socicon {
+        margin: 0px 10px 15px 10px;
+        filter: invert(1);
+    }
+
     .homeDiv .description {
         visibility: hidden;
     }
@@ -269,5 +374,11 @@ _________________________________________________________*/
     .projectLink p {
         color: black;
     }   
+
+    .ul-nav > div {
+        flex-direction: column;
+        font-size: 2.5rem;
+    }
 }
+
 

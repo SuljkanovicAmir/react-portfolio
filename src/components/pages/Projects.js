@@ -25,6 +25,10 @@ function Projects() {
             delay: 0.4,
            }}
         >
+          <Link to='/projects/shopping' className="project">
+            <h1>Shopping App</h1>
+            <p>[React, Axios, React Router]</p>
+          </Link>
           <Link to='/projects/restaurant' className="project">
             <h1>Restaurant</h1>
             <p>The Odin Project: Restaurant webpage</p>
@@ -33,9 +37,9 @@ function Projects() {
             <h1>The Weather App</h1>
             <p>The Odin Project: Weather App</p>
           </Link>
-          <Link to='/projects/shopping' className="project">
-            <h1>Shopping App</h1>
-            <p>[React, Axios, React Router]</p>
+          <Link to='/projects/photo-tagging' className="project">
+            <h1>Photo Tagging App</h1>
+            <p>[React, Firebase, React Router]</p>
           </Link>
         </motion.div>
       </motion.div>

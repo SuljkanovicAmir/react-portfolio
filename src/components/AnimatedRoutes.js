@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { Suspense, lazy} from 'react'
 import {Routes, Route, useLocation } from 'react-router-dom';
 import About from './pages/About'
 import Contact from './pages/Contact'
 import App from '../App'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
-import Restaurant from './pages/projects/Restaurant';
-import Weather from './pages/projects/Weather';
-import Shopping from './pages/projects/Shopping';
 import {AnimatePresence} from 'framer-motion'
+import Loading from './pages/Loading';
+
+const Restaurant = lazy(() => import('./pages/projects/Restaurant'));
+const Weather = lazy(() => import('./pages/projects/Weather'));
+const Shopping = lazy(() => import('./pages/projects/Shopping'));
+const PhotoTagging = lazy(() => import('./pages/projects/PhotoTagging'));
+
+
 
 function AnimatedRoutes() {
     const location = useLocation();
+   
 
     return (
     <AnimatePresence>
@@ -21,9 +27,26 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />}/>
         <Route path="/projects" element={<Projects />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="/projects/restaurant" element={<Restaurant />}/>
-        <Route path="/projects/weather" element={<Weather />}/>
-        <Route path="/projects/shopping" element={<Shopping />}/>
+          <Route path="/projects/restaurant" element={
+           <Suspense fallback={<Loading />}>
+              <Restaurant />
+            </Suspense>}
+          />
+          <Route path="/projects/weather" element={
+           <Suspense fallback={<Loading />}>
+              <Weather />
+            </Suspense>}
+          />
+          <Route path="/projects/shopping" element={ 
+            <Suspense fallback={<Loading />}>
+              <Shopping />
+            </Suspense>}
+          />
+          <Route path="/projects/photo-tagging" element={ 
+            <Suspense fallback={<Loading />}>
+              <PhotoTagging />
+            </Suspense>}
+          />
       </Routes>
     </AnimatePresence>
   )
