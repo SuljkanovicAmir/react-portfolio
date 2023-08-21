@@ -24,6 +24,7 @@
 
 .project > h1 {
     font-size: min(8vw, 5em);
+    color: black;
 }
 .project > p {
     color: #d00202;
@@ -65,8 +66,8 @@ _____________________________________________________*/
 .project-description {
     align-self: flex-end;
     font-size: 1.5em;
-    padding: 40px 40px 0px 0px;
-    color: white;
+    padding: 40px 0px 0px 0px;
+    color: black;
 }
 
 .project-title {

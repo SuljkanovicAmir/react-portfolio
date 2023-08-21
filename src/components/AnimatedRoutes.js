@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import {AnimatePresence} from 'framer-motion'
 import Loading from './pages/Loading';
+import MoviesAndTv from './pages/projects/MoviesAndTv';
 
 const Restaurant = lazy(() => import('./pages/projects/Restaurant'));
 const Weather = lazy(() => import('./pages/projects/Weather'));
@@ -17,7 +18,6 @@ const PhotoTagging = lazy(() => import('./pages/projects/PhotoTagging'));
 
 function AnimatedRoutes() {
     const location = useLocation();
-   
 
     return (
     <AnimatePresence>
@@ -27,6 +27,11 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />}/>
         <Route path="/projects" element={<Projects />}/>
         <Route path="/contact" element={<Contact />}/>
+          <Route path="/projects/moviesandtv" element={ 
+              <Suspense fallback={<Loading />}>
+                <MoviesAndTv />
+              </Suspense>}
+            />
           <Route path="/projects/restaurant" element={
            <Suspense fallback={<Loading />}>
               <Restaurant />

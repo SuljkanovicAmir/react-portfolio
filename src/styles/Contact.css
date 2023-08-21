@@ -10,12 +10,13 @@
     justify-content: center;
     padding: 7px 30px;
     min-width: 180px;
-    color: black;
-    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
     font-size: 1.5em;
     cursor: pointer;
-    border: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.356);
     transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    background-color: rgb(15, 15, 15);
 }
 
 .contactBtn:hover {

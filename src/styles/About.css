@@ -16,3 +16,14 @@
     margin: auto;
     margin-top: 100px;
 }
+
+
+.aboutText > div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-name {
+    color: #d00202;
+}

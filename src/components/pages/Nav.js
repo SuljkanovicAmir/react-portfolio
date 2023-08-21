@@ -43,7 +43,7 @@ function Navigation() {
                   <NavLink activeclassname="active" onClick={handleClick} className={"tab"} to="/contact">Contact</NavLink>
                 </div>
               </ul>
-              <button className="burger" onClick={handleClick}>
+              <button className={isActive ? 'burger ' : 'burger hidden'} onClick={handleClick}>
                 <img src={Burger} alt='burger menu' />
               </button>
             </nav>

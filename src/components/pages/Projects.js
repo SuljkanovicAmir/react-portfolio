@@ -25,6 +25,10 @@ function Projects() {
             delay: 0.4,
            }}
         >
+           <Link to='/projects/moviesandtv' className="project">
+            <h1>Movies and TV</h1>
+            <p>[Nextjs, The Movie Database]</p>
+          </Link>
           <Link to='/projects/shopping' className="project">
             <h1>Shopping App</h1>
             <p>[React, Axios, React Router]</p>
