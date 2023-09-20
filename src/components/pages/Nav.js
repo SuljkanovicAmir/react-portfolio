@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import Burger from '../../styles/images/burger.svg'
 import Close from '../../styles/images/close.svg'
-import Socials from "./Socials";
 
 
 
@@ -11,6 +9,8 @@ import Socials from "./Socials";
 function Navigation() {
   const [isActive, setIsActive] = useState(false);
   const [activeTransition, setActiveTransition] =  useState()
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
     if(activeTransition === true) {
@@ -21,12 +21,31 @@ function Navigation() {
   },[activeTransition])
 
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setIsHeaderVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
+  const headerStyle = {
+    maxHeight: isActive ? "0px" : "70px", // Adjust this value as needed
+  };
+
+
+
   const handleClick = event => {
     setIsActive(current => !current);
     setActiveTransition(current => !current)
   };
 
     return (
+      <header  className={isHeaderVisible ? "header-visible" : "header-hidden"} style={headerStyle}>
       <div className="navContainer">
           <div className={activeTransition ? 'transition anim-trans' : 'transition'}></div>
           <NavLink className={"logoText"} onClick={() => {setIsActive(false); setActiveTransition(current => !current)}} to="/">[a]</NavLink>
@@ -48,8 +67,8 @@ function Navigation() {
               </button>
             </nav>
           </div>
-          <Socials />
       </div>
+      </header>
     );
   }
   

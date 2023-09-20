@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavLink } from "react-router-dom";
 import PT from '../../../styles/images/p-t.jpg'
 import PT2 from '../../../styles/images/p-t2.jpg'
+import ExitIcon from  "../../../styles/images/close.svg";
+import { Link } from "react-router-dom";
 
 function PhotoTagging() {
   return (
     <div className='project-page restaurant'>
-    <NavLink to="/projects" className='project-description'><p className="project-description">my projects.</p></NavLink>
     <h1 className='project-title restaurantTitle'>Project: Photo Tagging App</h1>
     <p>The Odin Project: Where's Waldo (A Photo Tagging App)</p>
     <div className='imgsDiv'>
@@ -30,6 +30,14 @@ function PhotoTagging() {
                 <span>Checkout Github</span>
             </a> 
         </div>
+    </div>
+    <div className="exit-project">
+      <Link to='/projects'>
+        <img src={ExitIcon} alt="exit"/>
+      </Link>
+    </div>
+    <div className='not-available'>
+        <h1>Site Updates in Progress - Thank You for Your Patience!</h1>
     </div>
 </div>
   )

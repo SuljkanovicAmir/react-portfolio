@@ -13,6 +13,7 @@ const Restaurant = lazy(() => import('./pages/projects/Restaurant'));
 const Weather = lazy(() => import('./pages/projects/Weather'));
 const Shopping = lazy(() => import('./pages/projects/Shopping'));
 const PhotoTagging = lazy(() => import('./pages/projects/PhotoTagging'));
+const ArhitectStudio = lazy(() => import('./pages/projects/ArhitectStudio'));
 
 
 
@@ -40,6 +41,11 @@ function AnimatedRoutes() {
           <Route path="/projects/weather" element={
            <Suspense fallback={<Loading />}>
               <Weather />
+            </Suspense>}
+          />
+            <Route path="/projects/arhitectstudio" element={ 
+            <Suspense fallback={<Loading />}>
+              <ArhitectStudio />
             </Suspense>}
           />
           <Route path="/projects/shopping" element={ 

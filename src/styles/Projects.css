@@ -1,135 +1,281 @@
-.projectDiv {
-    display: flex;
-    flex-direction: column;
+.projects-div {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 12% 150px;
+
 }
 
 .projects {
-    display: flex;
-    height: 100%;
-    width: 70%;
-    flex-direction: column;
-    gap: 140px;
-    margin: auto;
-    margin-top: 180px;
-    margin-bottom: 100px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
+
+
+.projects-title {
+  font-family: 'GTWalsheimPro-Light';
+  margin-top: 100px;
+  font-size: min(8vw, 6em);
+  margin-bottom: 100px;
+  margin-left: 20%;
+}
 
 .project {
-    font-family: 'Graphik';
-    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-    cursor: pointer;
-    color: white;
-}
-
-.project > h1 {
-    font-size: min(8vw, 5em);
-    color: black;
-}
-.project > p {
-    color: #d00202;
-    font-size: min(5vw, 1.4em);
-}
-
-
-.project:hover {
-    transition: all .6s cubic-bezier(0.2, 0.6, 0.2, 1);
-    cursor: pointer;
-    transform: translateX(50px);
+  font-family: "GTWalsheimPro-Light";
+  transition: all 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: black;
+  opacity: 1;
+  margin-left: 20%;
+  transform: translateX(-250px);
 }
 
 
 
 
 
+
+.project > div > h1 {
+  font-size: min(6vw, 3.5em);
+}
+.project > div > p {
+  font-size: min(5vw, 1.3em);
+  color: #0000008a;
+}
+
+.projects-main-img {
+  width: 200px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 3px, rgba(0, 0, 0, 0.164) 0px 0px 2px;
+  transform: scale(0.9);
+  transition: 0.3s ease-out;
+  opacity: 0;
+}
+
+.project:hover .projects-main-img {
+  opacity: 1;
+  transform: scale(1);
+  transform: rotate(-1deg)
+}
 
 /*___________________________________________________
 
                 Projects pages
 _____________________________________________________*/
 
+.project-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin-bottom: 100px;
+  z-index: 12;
+  position: relative;
+  background-color: white;
+}
+
+.exit-project {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 50;
+  border-radius: 50%;
+  background-color: #888888c5;
+  display: flex;
+}
+
+.exit-project a {
+  margin: auto;
+  width: 24px;
+  height: 24px;
+}
+
+.exit-project img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.project-header-wrapper {
+  display: flex;
+  width: 100vw;
+  flex: 1;
+  min-height: 100vh;
+  z-index: 11;
+}
+
+.project-header-title-div {
+  padding: 100px 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: 'GTWalsheimPro-Light';
+  font-weight: 200;
+  background-color: white;
+  flex: 1;
+  max-width: 30%;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.project-header-title > :first-child {
+    color: #bcbcbc;
+    line-height: 30px;
+}
+
+.project-header-title > :last-child {
+  color: #111;
+}
 
 
-
-
-
-
-.project-page{
+.project-header-img-div {
+    width: calc(168px + ((100% - 264px) / 12 * 8)); 
     display: flex;
+    background: #111111;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     flex-direction: column;
-    padding: 10px 50px;
-    min-height: 100%;
-    font-family: 'Poppins';
-    font-weight: 900;
+    color: white;
+    gap: 20px;
+    flex: 1;
+    z-index: 11;
+}
+
+.project-header-img-div img {
+  height: 140px;
+  width: auto;
+  filter: invert(1);
+}
+
+.project-header-img-div p {
+  font-size: min(5vw, 2em);
 }
 
 .project-description {
-    align-self: flex-end;
-    font-size: 1.5em;
-    padding: 40px 0px 0px 0px;
-    color: black;
+  padding: 200px 8% 100px 4%;
+  display: flex;
+}
+
+.project-description :first-child {
+  color: #bcbcbc;
+  font-size: 1.5em;
+  width: 35%;
+}
+
+.project-description :last-child {
+  font-size: min(3vw,2em);
+  width: 65%;
+  margin-left: auto;
 }
 
 .project-title {
-    font-size: 5vw;
-    margin-top: 100px;
+  font-size: 2vw;
+  margin-top: 100px;
 }
 
-.project-page > p {
-    color: #d00202;
-    font-size: min(4vw, 1.4em);
+.project-images-div-one {
+  background-color: #111111;
+  color: white;
+  min-height: 110vh;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px 50px 0px;
 }
 
-.imgsDiv {
-    display: flex;
-    gap: 100px;
-    flex-direction: column;
-    width: 80%;
-    margin: 150px auto;
+.project-images-div-one > .project-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.imgsDiv hr {
-    width: 80%;
-    margin: auto;
+.project-images-div-one .project-imgs img {
+  border: 2px solid rgb(245, 245, 245);
+  border-radius: 10px;
+  height: auto;
+  width: 75%;
 }
 
-.imgsDiv img {
-    width: 50vw;
-    height: auto;
+.project-div-description {
+  padding: 0px 8% 100px 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
 }
 
-.imgsDiv img:last-child {
-    align-self: flex-end;
+
+.project-div-description :first-child {
+  color: #bcbcbc;
+  font-size: min(3vw, 1.5em);
+  width: 50%;
+}
+
+.project-div-description :last-child {
+  font-size: min(3vw, 1.6em);
+  width: 50%;
+  line-height: 40px;
 }
 
 
-.project-imgs {
-    display: flex;
-    justify-content: space-around;
+.project-images-div-two,
+.project-images-div-three   {
+  margin: 100px 0px 50px 0px;
 }
 
-.project-imgs h1 {
-    align-self: center;
-    font-size: min(4vw, 1.4em);
+.project-images-div-two > .project-imgs {
+  display: flex;
+  justify-content: flex-end;
 }
+
+.project-images-div-two > .project-imgs img {
+  width: 70%;
+}
+
+.project-div-description.third {
+  align-items: flex-start;
+}
+
+
+
+.project-images-div-three > .project-imgs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+
+
+
+
 
 .projectLink {
-    align-self: flex-end;
-    display: flex;
-    gap: 10px;
-    font-size: min(3vw, 1.2em);
-    flex-direction: column;
+  display: flex;
+  gap: 10px;
+  font-size: min(3vw, 1.2em);
+  flex-direction: column;
+  padding: 10px;
+  margin-left: 4%;
 }
 
 .projectLink span {
-    color: rgb(151, 175, 247);
+  color: rgb(168, 168, 168);
 }
 
 .projectLink > div {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
-.projectLink a {
-    align-self: flex-end;
-}

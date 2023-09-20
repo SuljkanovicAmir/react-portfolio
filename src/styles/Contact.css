@@ -1,50 +1,85 @@
-.contactDiv {
-    display: flex;
-    flex-direction: column;
-}
 
-.contactBtn {
+.main-contact {
     display: flex;
-    font-family: 'Poppins';
-    font-weight: 900;
+    min-height: 100vh;
+    background-color: white;
+    padding: 250px 12% 150px;
+    position: relative;
+    z-index: 2;
     justify-content: center;
-    padding: 7px 30px;
-    min-width: 180px;
-    color: rgb(255, 255, 255);
-    border-radius: 8px;
-    font-size: 1.5em;
-    cursor: pointer;
-    border: 2px solid rgba(0, 0, 0, 0.356);
-    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-    background-color: rgb(15, 15, 15);
-}
+    font-family: 'GTWalsheimPro-Light';
+    color: black;
+  }
 
-.contactBtn:hover {
-    transform: scale(1.06);
-    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-}
+  .main-contact section {
+    width: 70%;
+  }
 
-.contactText {
-    font-size: 3em;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 60%;
-    width: 75%;
-    gap: 30px;
-    margin-right: 50px;
-    flex: 1;
-}
-
-.contactText > div {
-    width: 60%;
-    align-self: center;
-    font-size: 1.7rem;
-}
-
-
-.contactDiv a {
-    align-self: center;
+  a {
+    color: black;
+  }
+  
+  .contact-socials-div {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px 5px; 
+  }
+  
+  
+  .contact-header {
     margin-bottom: 100px;
-}
+  }
+  
+  .contact-header h1 {
+    font-size: 5em;
+  }
+
+  .contact-header p {
+    margin-top: 20px;
+    width: 60%;
+    font-size: 1em;
+  }
+  
+  .contact-email {
+    font-size: 1.5em;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-email > p:first-child {
+    font-size: 0.8em;
+    color: #0000008a;
+  }
+  
+  .contact-socials {
+    font-size: 1em;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  
+  .contact-socials > p:first-child {
+    color: #0000008a;
+    font-weight: 700;
+  }
+  
+  .contact-socials > p:last-child {
+    cursor: pointer;
+  }
+  
+  .contact-hover span {
+    background-color: black;
+    height: 2px;
+    width: 0%;
+    display: block;
+    transition: 0.8s ease-in-out;
+    margin-top: 2px;
+  }
+  
+  .contact-hover:hover span {
+    width: 100%;
+  }

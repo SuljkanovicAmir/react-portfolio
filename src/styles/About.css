@@ -4,21 +4,31 @@
   }
   
 
-.aboutDiv {
+.about-div {
     display: flex;
-    flex-direction: column;
+    font-family: 'GTWalsheimPro-Light';
+    justify-content: center;
+    padding-top: 200px;
+    gap: 30px;
+    padding: 120px 12% 150px;
+
 }
 
-.aboutText {
-    font-size: 2em;
-    height: 90%;
-    width: 60%;
-    margin: auto;
-    margin-top: 100px;
+.about-text {
+    font-size: 1.5em;
+    width: 50%;
+    font-weight: 300;
+    margin-top: 50px;
 }
 
+.about-me-name {
+    width: 30%;
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-top: 50px;
+}
 
-.aboutText > div {
+.about-text > div {
     display: flex;
     flex-direction: column;
     gap: 40px;

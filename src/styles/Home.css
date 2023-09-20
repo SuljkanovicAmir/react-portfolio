@@ -1,29 +1,33 @@
 .homeDiv {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to top left,#eeeae7,#f5f3f4);
     min-height: 100%;
     height: 100vh;
     position: relative;
 }
 
 .homeText {
-    font-size: 11em;
+    font-size: 3em;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 70%;
-    width: 60%;
+    width: 90%;
     font-family: 'Semibold';
     letter-spacing: -2px;
-    flex: 1;
+    flex: 1 1;
     color: black;
+    gap: 15px;
 }
 
-.homeText div:nth-child(2),
-.homeText div:last-child {
+.homeText div:first-child{
+    font-size: 1.8rem;
+}
+
+.homeText div:nth-child(2){
     color: #ea0f1e
+
 }
 
 
@@ -31,7 +35,7 @@
     position: fixed;
 }
 .homeDiv .description {
-    visibility: hidden;
+    display: none;
 }
 
 
@@ -58,6 +62,7 @@
     transform: translateX(-50%) rotate(45deg);
     cursor: pointer;
     z-index: 1;
+    display: none;
 }
 
 
@@ -75,3 +80,266 @@
         opacity: 0.7;
     }
 }
+
+
+
+/*________________
+
+
+    Preview About 
+
+_______________*/
+
+.about-div-preview {
+    min-height: 80vh;
+    font-family: 'Poppins';
+    font-weight: 900;
+    padding: 120px 12% 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.about-text-preview {
+    font-size: 2em;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.about-text-preview > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    font-family: 'GTWalsheimPro-Light';
+}
+
+.about-preview-title {
+    font-size: 1.2em;
+    display: block;
+    width: 85%;
+    line-height: 55px;
+}
+
+.about-preview-p {
+    font-weight: 200;
+    margin-top: 50px;
+    display: block;
+    width: 80%;
+    font-size: 0.8em;
+    line-height: 50px;
+}
+
+
+
+
+
+/*________________
+
+
+    Preview Contact 
+
+_______________*/
+
+
+.contact-div-preview {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 12% 40px;
+    font-family: 'GTWalsheimPro-Light' !important;
+    min-height: 35vh;
+    background: linear-gradient(to top,#eeeae7,#f5f3f4);
+    justify-content: space-around;
+}
+
+.contact-div-preview a {
+    align-self: center;
+}
+
+.contact-text-preview {
+    font-size: 1.2em;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: rgb(0, 0, 0);
+}
+
+.cp-get-in-touch {
+    width: 50%;
+    font-size: 1.1rem;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cp-description {
+    width: 80%;
+}
+
+.cp-name {
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+    align-self: center;
+    width: 290px;
+    text-align:end;
+    margin-bottom: 20px;
+}
+
+.contact-text-preview .projects-link {
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.footer-socials :last-child {
+    margin-left: 5px;
+}
+
+
+
+.contact-btn-preview {
+    padding: 7px 26px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border: 1px solid rgb(255 255 255);
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    background-color: rgb(40 40 40);
+}
+
+
+.contact-btn-preview:hover {
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+
+
+
+/*________________
+
+
+    Preview Projects 
+
+_______________*/
+
+
+.projects-div-preview {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-projects {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 150px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.project-preview {    
+    display: flex;
+    height: 580px;
+    font-family: 'GTWalsheimPro-Light';
+    cursor: pointer;
+    color: black;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.project-preview:nth-child(2) {
+    margin-left: auto;
+}
+
+.image-wrapper:nth-child(2) {
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.image-wrapper {   
+    width: 225px;
+    min-width: 225px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 475px;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+.project-preview-images-div {
+    height: 580px;
+    display: flex;
+    gap: 50px;
+}
+
+
+
+.image-wrapper2 { 
+    width: 700px;
+    min-width: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.image-wrapper2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+.text-div {
+    width: 330px;
+}
+
+.title-div {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.title-div img {
+    height: 25px;
+}
+
+.title-div h1 {
+    font-size: 1.1em;
+    color: #0000009c;
+}
+.text-div p {
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+
+
